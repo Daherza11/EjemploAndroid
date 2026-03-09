@@ -1,5 +1,6 @@
 package com.example.myapplication
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
@@ -8,23 +9,25 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.myapplication.databinding.WidgetsBinding
+import com.example.myapplication.databinding.ActivityMainBinding
 import com.squareup.picasso.Picasso
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var binding: WidgetsBinding
+    lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        binding = WidgetsBinding.inflate(layoutInflater)
+        binding = ActivityMainBinding.inflate(layoutInflater)
 
         setContentView(binding.root)
 
-        val url = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJtHpUVUSuUGvRVulSHtJofCd31QWOnQnPMw&s"
 
-        Picasso.get().load(url).into(binding.imgPicasso)
+
+//        val url = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJtHpUVUSuUGvRVulSHtJofCd31QWOnQnPMw&s"
+//
+//        Picasso.get().load(url).into(binding.imgPicasso)
 
 
 //        binding.imgAvatar.setOnClickListener{
